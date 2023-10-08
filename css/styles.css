@@ -17,8 +17,21 @@ body {
   --modal-background: #fcfcfc;
 }
 
+.container {
+  width: 1158px;
+  margin: auto;
+  padding: 0px 15px;
+}
+
 .link {
   text-decoration: none;
+}
+
+.header {
+  border-bottom: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -29,6 +42,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--brand-color);
+  display: inline-block;
 }
 
 .logo-studio {
@@ -38,12 +52,22 @@ body {
 .list {
   list-style: none;
 }
-.nav-list-item {
+
+.nav-list {
+  display: inline-block;
+}
+
+.nav-list-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+}
+
+.nav-list-item {
+  display: inline-block;
+  padding: 24px 20px;
 }
 
 .link:hover,
@@ -54,7 +78,13 @@ body {
 .contact {
   font-style: normal;
 }
+
 .nav-contact-item {
+  display: inline-block;
+  padding: 24px 20px;
+}
+
+.nav-contact-link {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -64,6 +94,12 @@ body {
 
 .footer {
   background-color: var(--dark-color);
+  margin-top: 0px;
+}
+
+.footer-contents {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .logo-studio-footer {
@@ -75,10 +111,12 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--light-color);
+  width: 264px;
 }
 
 .hero-section {
   background-color: var(--dark-color);
+  height: 600px;
 }
 
 .hero-title {
@@ -88,6 +126,11 @@ body {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--white-background);
+  width: 496px;
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 188px;
 }
 
 .order-button {
@@ -99,6 +142,14 @@ body {
   color: var(--white-background);
   background-color: var(--brand-color);
   cursor: pointer;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  display: block;
+  border: none;
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4%;
 }
 
 .order-button:hover,
@@ -106,12 +157,29 @@ body {
   background-color: var(--pressed-color);
 }
 
-.objectives-title {
-  visibility: hidden;
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.list {
+ul,
+ol {
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.objective-item {
+  display: inline-block;
+  width: calc((100% - 48px) / 4);
 }
 
 .objective {
@@ -120,6 +188,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+  margin-bottom: 8px;
+  margin-top: 120px;
 }
 
 .objectives-description {
@@ -127,6 +197,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  display: inline-block;
+  margin-top: 8px;
 }
 
 .introduction-title {
@@ -137,6 +209,17 @@ body {
   text-align: center;
   text-transform: capitalize;
   color: var(--dark-color);
+  margin-top: 120px;
+}
+
+.introduction-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.introduction-item {
+  margin-bottom: 120px;
+  margin-top: 120px;
 }
 
 .team-section {
@@ -151,10 +234,19 @@ body {
   color: var(--dark-color);
   text-align: center;
   text-transform: capitalize;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.team-list {
+  margin-bottom: 120px;
 }
 
 .team-item {
   background-color: var(--white-background);
+  width: calc((100% - 48px) / 4);
+  display: inline-block;
+  margin-bottom: 120px;
 }
 
 .member {
@@ -173,8 +265,12 @@ body {
   color: var(--text-color);
 }
 
-.projects-title {
-  visibility: hidden;
+.filter-menu {
+  width: 586px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
 }
 
 .filter-button {
@@ -187,6 +283,9 @@ body {
   background-color: var(--light-color);
   border-color: #e7e9fc;
   cursor: pointer;
+  border: none;
+  padding: 12px 24px 12px 24px;
+  margin: 96px 0px;
 }
 
 .filter-button:hover,
@@ -195,19 +294,36 @@ body {
   background-color: var(--pressed-color);
 }
 
+.projects-menu {
+  display: flex;
+  column-gap: 24px;
+  row-gap: 48px;
+  flex-wrap: wrap;
+  padding-bottom: 120px;
+}
+
+.projects-item {
+  width: calc((100% - 48px) / 3);
+  border: 1px solid var(--accent-color);
+}
+
+.project {
+  padding: 0px 16px;
+}
+
 .project-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
-  text-align: center;
+  text-align: left;
 }
 
 .project-type {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  text-align: center;
+  text-align: left;
   color: var(--text-color);
 }
